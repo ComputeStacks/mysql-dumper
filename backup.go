@@ -41,7 +41,7 @@ func performBackup(instance *Instance) {
 
 	//cmdExec := exec.Command("bash", "-c", strings.Join(backupCommand, " "))
 
-	cmd := exec.Command("ash", "-c", strings.Join(backupCommand, " "))
+	cmd := exec.Command("sh", "-c", strings.Join(backupCommand, " "))
 	cmd.Env = os.Environ()
 	cmd.Dir = "/tmp"
 	out, err := cmd.CombinedOutput()

@@ -6,18 +6,8 @@ This is designed to be used in conjunction with our [MySQL Backup Image](https:/
 
 ## Configuration
 
-The following environmental variables must be defined in order for this to work:
-
-  * `API_HOST`: The ComputeStacks API Endpoint _(e.g. https://portal.example.com/api)_
-  * `API_KEY`: Your ComputeStacks API Key
-  * `API_SECRET`: Your ComputeStacks API Secret
-  * `PROJECT_ID`: Your ComputeStacks Project ID
-  
- Additionally, the following executables must be available on the system:
+The following executables must be available on the system:
  
-   * `mysql`
-   * `mysqldump`
-   * `tar`
-   
-   
- 
+* `mysql`
+* `mysqldump`
+* `tar`

@@ -24,23 +24,13 @@ func configured() bool {
 	// Verify we have the correct params
 	isReady := true
 
-	log().Info("Starting MySQL Dump Tool",
-		"API Key",os.Getenv("API_KEY"),
-		"API Secret", os.Getenv("API_SECRET"),
-		"Project", os.Getenv("PROJECT_ID"),
-		"API Host", os.Getenv("API_HOST")) // https://dev.computestacks.net/api
+	log().Info("Starting MySQL Dump Tool")
 
 	// Just basic sanity checking
-	if string(os.Getenv("API_HOST")) == "" {
+	if string(os.Getenv("METADATA_AUTH")) == "" {
 		isReady = false
 	}
-	if string(os.Getenv("API_KEY")) == "" {
-		isReady = false
-	}
-	if string(os.Getenv("API_SECRET")) == "" {
-		isReady = false
-	}
-	if string(os.Getenv("PROJECT_ID")) == "" {
+	if string(os.Getenv("METADATA_URL")) == "" {
 		isReady = false
 	}
 
